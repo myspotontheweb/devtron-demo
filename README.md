@@ -9,10 +9,10 @@ https://docs.devtron.ai/
 Create a Kubernetes cluster
 
 ```
-export NAME=my-cluster-1
+export AZURE_NAME=my-cluster-1
 export AZURE_SUBSCRIPTION=my-subscription
 
-bin/bookstrap-aks.sh
+bin/bootstrap-aks.sh
 ```
 
 Install Devtron
@@ -47,7 +47,7 @@ kubectl -n devtroncd get secret devtron-secret -o go-template='{{printf "Usernam
 # Clean up
 
 ```
-export NAME=my-cluster-1
+export AZURE_NAME=my-cluster-1
 export AZURE_SUBSCRIPTION=my-subscription
 
 bin/purge-aks.sh
