@@ -43,3 +43,12 @@ Credentials
 ```
 kubectl -n devtroncd get secret devtron-secret -o go-template='{{printf "Username: admin\nPassword: %s\n" (.data.ADMIN_PASSWORD|base64decode)}}'
 ```
+
+# Clean up
+
+```
+export NAME=my-cluster-1
+export AZURE_SUBSCRIPTION=my-subscription
+
+bin/purge-aks.sh
+```
